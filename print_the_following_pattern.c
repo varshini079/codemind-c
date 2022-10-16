@@ -2,15 +2,24 @@
 
 int main(){
     
-    int n,i,j,last;
+    int n,i,k,j,l;
     scanf("%d",&n);
-    last = 65+n;
-    for(i=65;i<last;i++){
-        for(j=0;j<n;j++){
-            printf("%c ",i);
+    
+    for(i=0;i<n;i++){
+        for(j=n-2;j>=i;j--){
+            printf(" ");
         }
+        for(k=i;k>=1;k--){
+            printf("%d",k);
+            
+        }
+        for(l=0;l<=i;l++){
+            printf("%d",l);
+        }
+        
         printf("
 ");
+        
     }
     
     return 0;
