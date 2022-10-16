@@ -2,25 +2,21 @@
 
 int main(){
     
-    int n,i,k,j,l;
+    int n,i,j,k,n_k,n_j;
     scanf("%d",&n);
-    
-    for(i=0;i<n;i++){
-        for(j=n-2;j>=i;j--){
+    n_k = n-1;
+    n_j = 1;
+    for (i=1;i<=n;i++){
+        for(k=n_k;k>=i;k--){
             printf(" ");
         }
-        for(k=i;k>=1;k--){
-            printf("%d",k);
-            
+        for (j=0;j<n_j;j++){
+            printf("%d",i);
         }
-        for(l=0;l<=i;l++){
-            printf("%d",l);
-        }
-        
+        n_j+=2;
         printf("
 ");
-        
     }
     
-    return 0;
+    return 0 ;
 }
